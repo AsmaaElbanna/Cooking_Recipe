@@ -8,8 +8,6 @@ class RecipeTodayCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
-      width: 200,
-
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.2),
         borderRadius: BorderRadius.circular(20),
@@ -17,17 +15,17 @@ class RecipeTodayCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.favorite_border),
-          Image.asset('asset/images/1.png'),
-          Text(
+          const Icon(Icons.favorite_border),
+          Image.asset('asset/images/1.png',height: 200,width: 200,),
+          const Text(
             'Breakfast',
             style: TextStyle(color: Colors.blueAccent),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text('French Toast with Berries'),
-          SizedBox(
+          const Text('French Toast with Berries',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+          const SizedBox(
             height: 10,
           ),
           RatingBar.builder(
@@ -45,14 +43,14 @@ class RecipeTodayCard extends StatelessWidget {
               print(rating);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const Text(
             '120 Calories',
             style: TextStyle(color: Colors.deepOrange),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -62,7 +60,7 @@ class RecipeTodayCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
-                    Icons.access_time,
+                    Icons.access_time, size: 15,
                     color: Colors.grey,
                   ),
                   Text(
@@ -71,10 +69,11 @@ class RecipeTodayCard extends StatelessWidget {
                   )
                 ],
               ),
+              SizedBox(width: 15,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.room_service_outlined, color: Colors.grey),
+                  Icon(Icons.room_service_outlined, color: Colors.grey, size: 15,),
                   Text('1 Serving', style: TextStyle(color: Colors.grey))
                 ],
               )
