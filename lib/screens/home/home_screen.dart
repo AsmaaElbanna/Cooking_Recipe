@@ -66,20 +66,20 @@ class HomeScreen extends StatelessWidget {
                   TextButton(onPressed: () {}, child: const Text('See All',style: TextStyle(color: Colors.deepOrange),))
                 ],
               ),
-
-              // Container(
-              //   width: 350,
-              //   child: ListView(
-              //     scrollDirection: Axis.horizontal,
-              //     children: [
-              //       RecipeTodayCard(),
-              //       SizedBox(width: 30,),
-              //       RecipeTodayCard(),
-              //       SizedBox(width: 30,),
-              //       RecipeTodayCard()
-              //     ],
-              //   ),
-              // ),
+         // Today's recipe
+              Container(
+                width: 350, height: 300,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    RecipeTodayCard(),
+                    SizedBox(width: 30,),
+                    RecipeTodayCard(),
+                    SizedBox(width: 30,),
+                    RecipeTodayCard()
+                  ],
+                ),
+              ),
 
               // recommended
               Row(
@@ -95,7 +95,19 @@ class HomeScreen extends StatelessWidget {
                   TextButton(onPressed: () {}, child: const Text('See All',style: TextStyle(color: Colors.deepOrange),))
                 ],
               ),
-              RecommendedCard()
+              Container(
+                width: 350, height: 300,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    RecommendedCard(),
+                    SizedBox(height: 30,),
+                    RecommendedCard(),
+                    SizedBox(height: 30,),
+                    RecommendedCard(),
+                  ],
+                ),
+              ),
 
             ],
           ),

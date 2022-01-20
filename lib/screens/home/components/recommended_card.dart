@@ -21,7 +21,9 @@ class RecommendedCard extends StatelessWidget {
             height: 100,
             width: 100,
           ),
-          SizedBox(width: 10,),
+          SizedBox(
+            width: 10,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,16 +34,21 @@ class RecommendedCard extends StatelessWidget {
                     'Breakfast',
                     style: TextStyle(color: Colors.blueAccent),
                   ),
-                  SizedBox(width: 150,),
-                  Icon(Icons.favorite_border,color: Colors.grey,),
+                  SizedBox(
+                    width: 150,
+                  ),
+                  Icon(
+                    Icons.favorite_border,
+                    color: Colors.grey,
+                  ),
                 ],
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               const Text(
                 'Blueberry Muffins',
-                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: [
                   RatingBar.builder(

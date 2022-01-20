@@ -15,8 +15,16 @@ class RecipeTodayCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.favorite_border),
-          Image.asset('asset/images/1.png',height: 200,width: 200,),
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+           const Icon(Icons.favorite,color: Colors.deepOrange,),
+           Image.asset(
+             'asset/images/1.png',
+             height: 100,
+             width: 150,
+           )
+         ],),
           const Text(
             'Breakfast',
             style: TextStyle(color: Colors.blueAccent),
@@ -24,7 +32,10 @@ class RecipeTodayCard extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text('French Toast with Berries',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+          const Text(
+            'French Toast with Berries',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          ),
           const SizedBox(
             height: 10,
           ),
@@ -60,7 +71,8 @@ class RecipeTodayCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
-                    Icons.access_time, size: 15,
+                    Icons.access_time,
+                    size: 15,
                     color: Colors.grey,
                   ),
                   Text(
@@ -69,11 +81,17 @@ class RecipeTodayCard extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(width: 15,),
+              SizedBox(
+                width: 15,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.room_service_outlined, color: Colors.grey, size: 15,),
+                  Icon(
+                    Icons.room_service_outlined,
+                    color: Colors.grey,
+                    size: 15,
+                  ),
                   Text('1 Serving', style: TextStyle(color: Colors.grey))
                 ],
               )

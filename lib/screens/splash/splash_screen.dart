@@ -1,7 +1,6 @@
 import 'package:cooking_recipe_app/screens/register/register_screen.dart';
 import 'package:cooking_recipe_app/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'components/custom_button.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -54,7 +53,7 @@ class SplashScreen extends StatelessWidget {
             Positioned(
               child: CustomButton('Register', () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => RegisterScreen()));
+                    MaterialPageRoute(builder: (context) => const RegisterScreen()));
               }),
               bottom: 100,
               left: 20,
